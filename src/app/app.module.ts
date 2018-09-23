@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { HeadToHeadComponent } from './headtohead.component';
+import { HeadToHeadService } from './headtohead.service';
+import { HttpClient } from '../../node_modules/@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    HeadToHeadComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HeadToHeadService, HttpClient],
+  bootstrap: [HeadToHeadComponent]
 })
 export class AppModule { }
